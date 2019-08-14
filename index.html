@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Orders</title>
+</head>
+<body>
+    <h1>Coffee Orders</h1>
+    <!--Outout element-->
+    <p></p>
+    <script>
+        var output = document.querySelector('p');
+        function coffee(type , size){
+            this.type = type,
+            this.size = size,
+            this.coffeeOrder = function(){
+                output.textContent = 'you have ordered a '+ this.size + ' ' + this.type +' coffee.';
+            };
+        }
+        //creating new object
+        var newOrder = new coffee('latte', 'small');
+        //calling method of an object
+        newOrder.coffeeOrder();
+    </script>
+</body>
+</html>
